@@ -1,7 +1,4 @@
-FROM eclipse-temurin:17-jre
-
+FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
-
-COPY target/*.jar app.jar
-
-CMD ["java", "-jar", "app.jar"]
+COPY target/labtest-1.0-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]s
